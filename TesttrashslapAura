@@ -1,0 +1,314 @@
+_G.slapkids = true
+while _G.slapkids do
+local player = game.Players.LocalPlayer
+local leaderstats = player:FindFirstChild("leaderstats")
+
+if leaderstats then
+    local gloveStat = leaderstats:FindFirstChild("Glove")
+    
+    if gloveStat then
+        local glove = gloveStat.Value
+        
+        local validGloves = {
+            "Default", "Extended", "T H I C K", "Squid", "Gummy", "RNG", "Tycoon", "Charge", "Baller", "Tableflip", "Booster", "Shield", "Track", "Goofy", "Confusion", "Elude", "Glitch", "Snowball", "fish", "Killerfish", "Obby", "Voodoo", "Leash", "Flamarang", "Berserk", "Quake", "Rattlebones", "Chain", "Ping Pong", "Whirlwind", "Slicer", "Counter", "Hammer", "Excavator", "Home Run", "Psycho", "Kraken", "Gravity", "Lure", "Jebaited", "Meteor", "Tinkerer", "Guardian Angel", "Sun", "Necromancer", "Zombie", "Dual", "Alchemist", "Parry", "Druid", "Oven", "Jester", "Ferryman", "Scythe", "Blackhole", "Santa", "Grapple", "Iceskate", "Pan", "Blasphemy", "Blink", "Ultra Instinct", "Admin", "Prop", "Joust", "Slapstick", "Firework", "Run", "Beatdown", "L.O.L.B.O.M.B", "Glovel", "Snow", "ZZZZZZZ", "Brick", "Pull", "Flash", "Spring", "Swapper", "Bull", "Dice", "Ghost", "Thanos", "Stun", "Za Hando", "Fort", "Magnet", "Pusher", "Anchor", "Space", "Boomerang", "Speedrun", "Mail", "Golden", "Cheeky", "Reaper", "Replica", "Defense", "Killstreak", "Reverse", "Shukuchi", "Duelist", "woah", "Ice", "Adios", "Blocked", "Engineer", "Rocky", "Conveyor", "STOP", "Phantom", "Wormhole", "Acrobat", "Plague", "[REDACTED]", "bus", "Phase", "Warp", "Bomb", "Bubble", "Jet", "Shard", "potato", "CULT", "bob", "Buddies", "Spy", "Detonator", "Rage", "Trap", "Orbit", "Hybrid", "Slapple", "Disarm", "Dominance", "Link", "Rojo", "rob", "Rhythm", "Nightmare", "Hitman", "Thor", "Retro", "Cloud", "Null", "spin", "Kinetic", "Recall", "Balloony", "Sparky", "Boogie", "Coil", "Diamond", "Megarock", "Moon", "Jupiter", "Mitten", "Hallow Jack", "OVERKILL", "The Flex", "Custom", "God's Hand", "Error"
+        }
+        
+        if table.find(validGloves, glove) then
+            local remoteEvent = game:GetService("ReplicatedStorage").GeneralHit
+            if glove == "Default" or glove == "Extended" then
+                remoteEvent = game:GetService("ReplicatedStorage").b
+            end
+if glove == "Snow" then
+remoteEvent = game:GetService("ReplicatedStorage").SnowHit
+end
+if glove == "ZZZZZZZ" then
+remoteEvent = game:GetService("ReplicatedStorage").ZZZZZZZHit
+end
+if glove == "Brick" then
+remoteEvent = game:GetService("ReplicatedStorage").BrickHit
+end
+if glove == "Pull" then
+remoteEvent = game:GetService("ReplicatedStorage").PullHit
+end
+if glove == "Flash" then
+remoteEvent = game:GetService("ReplicatedStorage").FlashHit
+end
+if glove == "Spring" then
+remoteEvent = game:GetService("ReplicatedStorage").springhit
+end
+if glove == "Swapper" then
+remoteEvent = game:GetService("ReplicatedStorage").HitSwapper
+end
+if glove == "Bull" then
+remoteEvent = game:GetService("ReplicatedStorage").BullHit
+end
+if glove == "Dice" then
+remoteEvent = game:GetService("ReplicatedStorage").DiceHit
+end
+if glove == "Ghost" then
+remoteEvent = game:GetService("ReplicatedStorage").GhostHit
+end
+if glove == "Thanos" then
+remoteEvent = game:GetService("ReplicatedStorage").ThanosHit
+end
+if glove == "Stun" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Za Hando" then
+remoteEvent = game:GetService("ReplicatedStorage").zhramt
+end
+if glove == "Fort" then
+remoteEvent = game:GetService("ReplicatedStorage").Fort
+end
+if glove == "Magnet" then
+remoteEvent = game:GetService("ReplicatedStorage").MagnetHIT
+end
+if glove == "Pusher" then
+remoteEvent = game:GetService("ReplicatedStorage").PusherHit
+end
+if glove == "Anchor" then
+remoteEvent = game:GetService("ReplicatedStorage").hitAnchor
+end
+if glove == "Space" then
+remoteEvent = game:GetService("ReplicatedStorage").HTSpace
+end
+if glove == "Boomerang" then
+remoteEvent = game:GetService("ReplicatedStorage").BoomerangH
+end
+if glove == "Speedrun" then
+remoteEvent = game:GetService("ReplicatedStorage").Speedrunhit
+end
+if glove == "Mail" then
+remoteEvent = game:GetService("ReplicatedStorage").MailHit
+end
+if glove == "Golden" then
+remoteEvent = game:GetService("ReplicatedStorage").GoldenHit
+end
+if glove == "Cheeky" then
+remoteEvent = game:GetService("ReplicatedStorage").CheekyHit
+end
+if glove == "Reaper" then
+remoteEvent = game:GetService("ReplicatedStorage").ReaperHit
+end
+if glove == "Replica" then
+remoteEvent = game:GetService("ReplicatedStorage").ReplicaHit
+end
+if glove == "Defense" then
+remoteEvent = game:GetService("ReplicatedStorage").DefenseHit
+end
+if glove == "Killstreak" then
+remoteEvent = game:GetService("ReplicatedStorage").KSHit
+end
+if glove == "Reverse" then
+remoteEvent = game:GetService("ReplicatedStorage").ReverseHit
+end
+if glove == "Shukuchi" then
+remoteEvent = game:GetService("ReplicatedStorage").ShukuchiHit
+end
+if glove == "Duelist" then
+remoteEvent = game:GetService("ReplicatedStorage").DuelistHit
+end
+if glove == "woah" then
+remoteEvent = game:GetService("ReplicatedStorage").woahHit
+end
+if glove == "Ice" then
+remoteEvent = game:GetService("ReplicatedStorage").IceHit
+end
+if glove == "Adios" then
+remoteEvent = game:GetService("ReplicatedStorage").hitAdios
+end
+if glove == "Blocked" then
+remoteEvent = game:GetService("ReplicatedStorage").BlockedHit
+end
+if glove == "Engineer" then
+remoteEvent = game:GetService("ReplicatedStorage").engiehit
+end
+if glove == "Rocky" then
+remoteEvent = game:GetService("ReplicatedStorage").RockyHit
+end
+if glove == "Conveyor" then
+remoteEvent = game:GetService("ReplicatedStorage").ConvHit
+end
+if glove == "STOP" then
+remoteEvent = game:GetService("ReplicatedStorage").STOP
+end
+if glove == "Phantom" then
+remoteEvent = game:GetService("ReplicatedStorage").PhantomHit
+end
+if glove == "Wormhole" then
+remoteEvent = game:GetService("ReplicatedStorage").WormHit
+end
+if glove == "Acrobat" then
+remoteEvent = game:GetService("ReplicatedStorage").AcHit
+end
+if glove == "Plague" then
+remoteEvent = game:GetService("ReplicatedStorage").PlagueHit
+end
+if glove == "[REDACTED]" then
+remoteEvent = game:GetService("ReplicatedStorage").ReHit
+end
+if glove == "bus" then
+remoteEvent = game:GetService("ReplicatedStorage").hitbus
+end
+if glove == "Phase" then
+remoteEvent = game:GetService("ReplicatedStorage").PhaseH
+end
+if glove == "Warp" then
+remoteEvent = game:GetService("ReplicatedStorage").WarpHt
+end
+if glove == "Bomb" then
+remoteEvent = game:GetService("ReplicatedStorage").BombHit
+end
+if glove == "Bubble" then
+remoteEvent = game:GetService("ReplicatedStorage").BubbleHit
+end
+if glove == "Jet" then
+remoteEvent = game:GetService("ReplicatedStorage").JetHit
+end
+if glove == "Shard" then
+remoteEvent = game:GetService("ReplicatedStorage").ShardHIT
+end
+if glove == "potato" then
+remoteEvent = game:GetService("ReplicatedStorage").potatohit
+end
+if glove == "CULT" then
+remoteEvent = game:GetService("ReplicatedStorage").CULTHit
+end
+if glove == "bob" then
+remoteEvent = game:GetService("ReplicatedStorage").bobhit
+end
+if glove == "Buddies" then
+remoteEvent = game:GetService("ReplicatedStorage").buddiesHIT
+end
+if glove == "Spy" then
+remoteEvent = game:GetService("ReplicatedStorage").SpyHit
+end
+if glove == "Detonator" then
+remoteEvent = game:GetService("ReplicatedStorage").DetonatorHit
+end
+if glove == "Rage" then
+remoteEvent = game:GetService("ReplicatedStorage").GRRRR
+end
+if glove == "Trap" then
+remoteEvent = game:GetService("ReplicatedStorage").traphi
+end
+if glove == "Orbit" then
+remoteEvent = game:GetService("ReplicatedStorage").Orbihit
+end
+if glove == "Hybrid" then
+remoteEvent = game:GetService("ReplicatedStorage").HybridCLAP
+end
+if glove == "Slapple" then
+remoteEvent = game:GetService("ReplicatedStorage").SlappleHit
+end
+if glove == "Disarm" then
+remoteEvent = game:GetService("ReplicatedStorage").DisarmH
+end
+if glove == "Dominance" then
+remoteEvent = game:GetService("ReplicatedStorage").DominanceHit
+end
+if glove == "Link" then
+remoteEvent = game:GetService("ReplicatedStorage").LinkHit
+end
+if glove == "Rojo" then
+remoteEvent = game:GetService("ReplicatedStorage").RojoHit
+end
+if glove == "rob" then
+remoteEvent = game:GetService("ReplicatedStorage").robhit
+end
+if glove == "Rhythm" then
+remoteEvent = game:GetService("ReplicatedStorage").rhythmhit
+end
+if glove == "Nightmare" then
+remoteEvent = game:GetService("ReplicatedStorage").Nightmarehit
+end
+if glove == "Hitman" then
+remoteEvent = game:GetService("ReplicatedStorage").HitmanHit
+end
+if glove == "Thor" then
+remoteEvent = game:GetService("ReplicatedStorage").ThorHit
+end
+if glove == "Retro" then
+remoteEvent = game:GetService("ReplicatedStorage").RetroHit
+end
+if glove == "Cloud" then
+remoteEvent = game:GetService("ReplicatedStorage").CloudHit
+end
+if glove == "Null" then
+remoteEvent = game:GetService("ReplicatedStorage").NullHit
+end
+if glove == "spin" then
+remoteEvent = game:GetService("ReplicatedStorage").spinhit
+end
+if glove == "Kinetic" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Recall" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Balloony" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Sparky" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Boogie" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Coil" then
+remoteEvent = game:GetService("ReplicatedStorage").HtStun
+end
+if glove == "Diamond" then
+remoteEvent = game:GetService("ReplicatedStorage").DiamondHit
+end
+if glove == "Megarock" then
+remoteEvent = game:GetService("ReplicatedStorage").DiamondHif
+end
+if glove == "Moon" then
+remoteEvent = game:GetService("ReplicatedStorage").CelestialHit
+end
+if glove == "Jupiter" then
+remoteEvent = game:GetService("ReplicatedStorage").CelestialHit
+end
+if glove == "Mitten" then
+remoteEvent = game:GetService("ReplicatedStorage").MittenHit
+end
+if glove == "Hallow Jack" then
+remoteEvent = game:GetService("ReplicatedStorage").HallowHIT
+end
+if glove == "OVERKILL" then
+remoteEvent = game:GetService("ReplicatedStorage").Overkillhit
+end
+if glove == "The Flex" then
+remoteEvent = game:GetService("ReplicatedStorage").FlexHit
+end
+if glove == "God's Hand" then
+remoteEvent = game:GetService("ReplicatedStorage").Godshand
+end
+if glove == "Error" then
+remoteEvent = game:GetService("ReplicatedStorage").Errorhit
+end
+            
+            local function hitPlayers()
+                while _G.slapkids do 
+                    local players = game:GetService("Players"):GetPlayers()
+    
+                    for _, player in ipairs(players) do
+                        local character = player.Character
+                        if character then
+                            local rightArm = character:FindFirstChild("Right Arm")
+                            if rightArm then
+                                remoteEvent:FireServer(rightArm)
+                            end
+                        end
+                    end
+                    wait(0.75)
+                end
+            end
+            
+            coroutine.wrap(hitPlayers)()
+        end
+    end
+end
+wait()
+end
